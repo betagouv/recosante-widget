@@ -1,15 +1,22 @@
+/*eslint-disable eqeqeq*/
+
 import { useQuery } from 'react-query'
 import axios from 'axios'
 import marked from 'marked'
 
 export function useSearch(search) {
+  console.log(search, Number(search))
   return useQuery(
     ['search', search],
     () =>
       search.length > 2
         ? axios
             .get(
-              `https://geo.api.gouv.fr/communes?&boost=population&limit=10&fields=nom,code,codesPostaux&nom=${search}`
+              `https://geo.api.gouv.fr/communes?&boost=population&limit=10&fields=nom,code,codesPostaux&${
+                Number(search) == search
+                  ? 'codePostal=' + search
+                  : 'nom=' + search
+              }`
             )
             .then((res) => res.data)
         : Promise.resolve([]),

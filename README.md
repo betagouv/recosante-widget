@@ -1,8 +1,6 @@
 # Mon Impact Transport - Télétravail
 
-Application web permettant de visualiser l'impact du télétravail sur le climat.
-
-https://teletravail.monimpacttransport.fr/
+Application web permettant de visualiser les indicateurs environnementaux d'une ville
 
 ## Développement
 
