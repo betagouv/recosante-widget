@@ -43,6 +43,7 @@ const Wrapper = styled.svg`
   width: 7.9375rem;
   height: auto;
   cursor: ${(props) => (props.animated ? 'none' : 'pointer')};
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 `
 const Bolt = styled.path`
   fill: #fffd53 !important;
