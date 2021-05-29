@@ -1,4 +1,4 @@
-# Mon Impact Transport - Télétravail
+# Recosanté - Widget
 
 Application web permettant de visualiser les indicateurs environnementaux d'une ville
 
