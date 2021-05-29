@@ -114,7 +114,10 @@ export default function Recommandation() {
   return (
     <Wrapper>
       <Header>
-        Nos <strong>recommandations</strong> pour vous protéger de la{' '}
+        Nos <strong>recommandations</strong>
+        <br />
+        pour vous protéger de la
+        <br />
         <strong>pollution de l’air</strong>
       </Header>
       <SliderWrapper>
