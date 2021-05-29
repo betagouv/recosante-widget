@@ -10,4 +10,4 @@ Application web permettant de visualiser les indicateurs environnementaux d'une 
 
 ## Déploiement
 
-Hébergement via Netlify. Il suffit de push sur ce repo (branche master) pour déployer.
+Hébergement via Clever Cloud. Il suffit de push sur ce repo (branche master) pour déployer.

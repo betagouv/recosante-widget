@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
 
 import Button from 'components/base/Button'
 
@@ -12,11 +13,13 @@ const StyledButton = styled(Button)`
   margin-bottom: 1rem;
 `
 export default function Buttons(props) {
+  let history = useHistory()
+
   return (
     <Wrapper>
       <StyledButton to='https://recosante.beta.gouv.fr'>M'abonner</StyledButton>
       {props.recommandation ? (
-        <Button hollow to={'/'}>
+        <Button hollow onClick={() => history.goBack()}>
           ← Retour
         </Button>
       ) : (
