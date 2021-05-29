@@ -5,7 +5,6 @@ import axios from 'axios'
 import marked from 'marked'
 
 export function useSearch(search) {
-  console.log(search, Number(search))
   return useQuery(
     ['search', search],
     () =>
