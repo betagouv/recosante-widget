@@ -11,13 +11,19 @@ const Wrapper = styled.div`
 const StyledButton = styled(Button)`
   margin-bottom: 1rem;
 `
-export default function Buttons() {
+export default function Buttons(props) {
   return (
     <Wrapper>
       <StyledButton to='https://recosante.beta.gouv.fr'>M'abonner</StyledButton>
-      <Button hollow to='/recommandation'>
-        Comment agir ?
-      </Button>
+      {props.recommandation ? (
+        <Button hollow to={'/'}>
+          ← Retour
+        </Button>
+      ) : (
+        <Button hollow to='/recommandation'>
+          Comment agir ?
+        </Button>
+      )}
     </Wrapper>
   )
 }

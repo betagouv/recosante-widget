@@ -2,10 +2,23 @@ import React from 'react'
 import styled from 'styled-components'
 import Slider from 'react-slick'
 
+import Buttons from 'components/misc/Buttons'
 import Advice from './recommandations/Advice'
+import Advice2 from './recommandations/Advice2'
+import Advice3 from './recommandations/Advice3'
 
 const Wrapper = styled.div`
-  margin: 4rem -2rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+const Header = styled.h1`
+  padding-right: 3rem;
+  font-size: 1.7rem;
+`
+const SliderWrapper = styled.div`
+  margin: 0 -2rem;
 
   .slick-dots {
     display: flex !important;
@@ -92,15 +105,28 @@ const Wrapper = styled.div`
     }
   }
 `
+const Bottom = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 export default function Recommandation() {
   return (
     <Wrapper>
-      <Slider infinite={true}>
-        <Advice />
-        <Advice />
-        <Advice />
-        <Advice />
-      </Slider>
+      <Header>
+        Nos <strong>recommandations</strong> pour vous protéger de la{' '}
+        <strong>pollution de l’air</strong>
+      </Header>
+      <SliderWrapper>
+        <Slider infinite={true}>
+          <Advice />
+          <Advice2 />
+          <Advice3 />
+        </Slider>
+      </SliderWrapper>
+      <Bottom>
+        <Buttons recommandation />
+      </Bottom>
     </Wrapper>
   )
 }
