@@ -13,9 +13,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
 `
+const Top = styled.div``
 const Header = styled.h1`
-  padding-right: 3rem;
-  font-size: 1.7rem;
+  margin: 2rem 0 0;
+  font-size: 1.75rem;
+  text-align: center;
 `
 const SliderWrapper = styled.div`
   margin: 0 -2rem;
@@ -54,7 +56,7 @@ const SliderWrapper = styled.div`
   .slick-arrow {
     position: absolute;
     z-index: 5;
-    top: 0.5rem;
+    top: 0.3rem;
     width: 2rem;
     height: 2rem;
     color: transparent;
@@ -113,20 +115,18 @@ const Bottom = styled.div`
 export default function Recommandation() {
   return (
     <Wrapper>
-      <Header>
-        Nos <strong>recommandations</strong>
-        <br />
-        pour vous protéger de la
-        <br />
-        <strong>pollution de l’air</strong>
-      </Header>
-      <SliderWrapper>
-        <Slider infinite={true}>
-          <Advice />
-          <Advice2 />
-          <Advice3 />
-        </Slider>
-      </SliderWrapper>
+      <Top>
+        <Header>
+          Découvrez nos <strong>recommandations</strong> pour
+        </Header>
+        <SliderWrapper>
+          <Slider infinite={true}>
+            <Advice />
+            <Advice2 />
+            <Advice3 />
+          </Slider>
+        </SliderWrapper>
+      </Top>
       <Bottom>
         <Buttons recommandation />
       </Bottom>

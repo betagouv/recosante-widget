@@ -6,8 +6,8 @@ const Wrapper = styled.div`
 `
 const Intro = styled.div`
   margin: 0 2rem 2rem;
-  font-style: italic;
-  font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 800;
   text-align: center;
 `
 const Reco = styled.p`
@@ -17,11 +17,7 @@ const Text = styled.p``
 export default function Recommandation() {
   return (
     <Wrapper>
-      <Intro>
-        Découvrez une recommandation pour
-        <br />
-        améliorer l’air intérieur de votre logement
-      </Intro>
+      <Intro>améliorer l’air intérieur de votre logement</Intro>
       <Reco>
         En raison des risques incendies, ne faites pas fonctionner un groupe
         électrogène ou un barbecue dans un local fermé.

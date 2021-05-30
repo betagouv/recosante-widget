@@ -6,8 +6,8 @@ const Wrapper = styled.div`
 `
 const Intro = styled.div`
   margin: 0 2rem 2rem;
-  font-style: italic;
-  font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 800;
   text-align: center;
 `
 const Reco = styled.p`
@@ -17,11 +17,7 @@ const Text = styled.p``
 export default function Recommandation() {
   return (
     <Wrapper>
-      <Intro>
-        Découvrez une recommandation pour
-        <br />
-        contribuer à réduire la pollution de l’air
-      </Intro>
+      <Intro>contribuer à réduire la pollution de l’air</Intro>
       <Reco>Il est interdit de brûler ses déchets verts en extérieur.</Reco>
       <Text>
         ℹ️ Il est conseillé de les apporter en déchèterie ou de les recycler

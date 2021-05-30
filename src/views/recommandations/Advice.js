@@ -6,8 +6,8 @@ const Wrapper = styled.div`
 `
 const Intro = styled.div`
   margin: 0 2rem 2rem;
-  font-style: italic;
-  font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 800;
   text-align: center;
 `
 const Reco = styled.p`
@@ -17,11 +17,7 @@ const Text = styled.p``
 export default function Recommandation() {
   return (
     <Wrapper>
-      <Intro>
-        Découvrez une recommandation pour
-        <br />
-        vos déplacements
-      </Intro>
+      <Intro>vos déplacements</Intro>
       <Reco>
         Pour éviter le développement de moisissures, aérer quotidiennement son
         logement notamment lors d'activité produisant de l'humidité (douche,
