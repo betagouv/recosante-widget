@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import Slider from 'react-slick'
+import { useHistory } from 'react-router-dom'
 
+import Button from 'components/base/Button'
 import Buttons from 'components/misc/Buttons'
 import Advice from './recommandations/Advice'
 import Advice2 from './recommandations/Advice2'
@@ -14,8 +16,14 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `
 const Top = styled.div``
-const Header = styled.h1`
-  margin: 2rem 0 0;
+const Header = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+`
+const Title = styled.h1`
+  margin: 0;
   font-size: 1.75rem;
   text-align: center;
 `
@@ -113,12 +121,19 @@ const Bottom = styled.div`
   align-items: center;
 `
 export default function Recommandation() {
+  let history = useHistory()
+
   return (
     <Wrapper>
       <Top>
         <Header>
-          Découvrez nos <strong>recommandations</strong> pour
+          <Button hollow onClick={() => history.goBack()}>
+            ← Retour
+          </Button>
         </Header>
+        <Title>
+          Découvrez nos <strong>recommandations</strong> pour
+        </Title>
         <SliderWrapper>
           <Slider infinite={true}>
             <Advice />
