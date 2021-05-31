@@ -20,18 +20,15 @@ export default function Recommandation() {
     <Wrapper>
       <Intro>vos déplacements</Intro>
       <Reco>
-        Pour éviter le développement de moisissures, aérer quotidiennement son
-        logement notamment lors d'activité produisant de l'humidité (douche,
-        cuisine, séchage du linge…).
+        Avec un enfant, éviter les sorties à proximité des grands axes routiers
+        aux heures de pointe (7h-10h et 17h-20h).
       </Reco>
       <Text>
-        ℹ️ Les moisissures ont des effets négatifs sur la santé, elles
-        exacerbent les allergies respiratoires et l'asthme.
-        <br />
-        <br />
-        💡 En cas de détection de moisissure, il est déconseillé aux personnes
-        atteintes de pathologies respiratoires de nettoyer elles-mêmes les
-        moisissures. Contacter son propriétaire si le problème est récurrent.
+        💡 Dans une étude réalisée en 2015, l’observatoire régional de
+        surveillance de la qualité de l’air en Occitanie démontré que le choix
+        d'emprunter un axe avec peu de trafic routier a permis de réduire
+        l'exposition moyenne du cycliste ou du piéton d’environ 40 % pour le
+        dioxyde d'azote (NO2) et de 50 % pour les particules PM10.
       </Text>
     </Wrapper>
   )
