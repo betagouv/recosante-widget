@@ -20,7 +20,7 @@ const Circle = styled.circle`
       ${(props) => (props.visible ? props.index * 300 + 600 : 0)}ms;
 `
 export default function Chart(props) {
-  const value = 3
+  const value = 4
 
   return (
     <Wrapper width='77' height='111' viewBox='0 0 77 111'>

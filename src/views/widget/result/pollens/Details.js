@@ -18,9 +18,9 @@ export default function Details(props) {
         <Element index={0} open={props.open} label='Chêne' value={2} />
         <Element index={1} open={props.open} label='Bouleau' value={3} />
         <Element index={2} open={props.open} label='Cypres' value={2} />
-        <Element index={3} open={props.open} label='Graminées' value={5} />
-        <Element index={4} open={props.open} label='Frênes' value={1} />
-        <Element index={5} open={props.open} label='Charme' value={4} />
+        <Element index={3} open={props.open} label='Graminées' value={4} />
+        <Element index={4} open={props.open} label='Frênes' value={3} />
+        <Element index={5} open={props.open} label='Charme' value={2} />
       </Elements>
     </Wrapper>
   )

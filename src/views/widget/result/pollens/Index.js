@@ -31,7 +31,7 @@ export default function Index(props) {
   return (
     <Wrapper>
       <Label>Risque d’allergie aux pollens</Label>
-      <Value>Moyen</Value>
+      <Value>Élevé</Value>
       <Toggle onClick={() => props.setOpen((prevOpen) => !prevOpen)}>
         {props.open ? 'Cacher' : 'Voir'} les pollens actifs
       </Toggle>

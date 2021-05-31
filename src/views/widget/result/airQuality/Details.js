@@ -7,14 +7,14 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
 `
-export default function Details() {
+export default function Details(props) {
   return (
     <Wrapper>
-      <Element label='PM2.5' index='bon' />
-      <Element label='PM10' index='moyen' />
-      <Element label='NO2' index='degrade' />
-      <Element label='O3' index='mauvais' />
-      <Element label='SO2' index='tres-mauvais' />
+      <Element label='PM2.5' index='moyen' />
+      <Element label='PM10' index={props.data && props.data.data[0].indice} />
+      <Element label='NO2' index='moyen' />
+      <Element label='O3' index='moyen' />
+      <Element label='SO2' index='bon' />
     </Wrapper>
   )
 }

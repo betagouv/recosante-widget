@@ -8,6 +8,7 @@ const Intro = styled.div`
   margin: 0 2rem 2rem;
   font-size: 1.75rem;
   font-weight: 800;
+  font-style: italic;
   text-align: center;
 `
 const Reco = styled.p`
