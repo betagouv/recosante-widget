@@ -8,8 +8,8 @@ const background = script.dataset.background
 const source = window.location.href.toString()
 
 const src = `${
-  domain || 'https://widget.recosante.beta.gouv.fr/'
-}/?size=${size}&background${background}&source=${source}`
+  domain || 'https://recosante-widget.netlify.app'
+}/?size=${size}&background=${background}&source=${source}`
 
 const iframe = document.createElement('iframe')
 
