@@ -3,12 +3,13 @@ import { iframeResize } from 'iframe-resizer'
 const script = document.getElementById('widget-recosante')
 
 const domain = script.dataset.domain
-const search = script.dataset.search
+const size = script.dataset.size
+const background = script.dataset.background
 const source = window.location.href.toString()
 
-const src = `${domain || 'https://widget.recosante.beta.gouv.fr/'}/${search}${
-  search && search.includes('?') ? '&' : '?'
-}source=${source}`
+const src = `${
+  domain || 'https://widget.recosante.beta.gouv.fr/'
+}/?size=${size}&background${background}&source=${source}`
 
 const iframe = document.createElement('iframe')
 
@@ -18,6 +19,7 @@ const iframeAttributes = {
   allowfullscreen: true,
   webkitallowfullscreen: true,
   mozallowfullscreen: true,
+  allow: 'geolocation',
 }
 for (var key in iframeAttributes) {
   iframe.setAttribute(key, iframeAttributes[key])
