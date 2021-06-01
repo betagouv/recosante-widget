@@ -33,10 +33,10 @@ const Superscript = styled.sup`
 `
 export default function Element(props) {
   const { setElement } = useContext(ModalContext)
-  return (
-    <Wrapper index={props.index} onClick={() => setElement(props.label)}>
+  return props.value ? (
+    <Wrapper index={props.value.indice} onClick={() => setElement(props.label)}>
       {props.label}
       <Superscript> (?)</Superscript>
     </Wrapper>
-  )
+  ) : null
 }
