@@ -9,6 +9,8 @@ import Sources from 'components/misc/Sources'
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  background-color: #ffffff;
+  border-radius: 0.25rem;
 `
 const Logos = styled(MagicLink)`
   display: flex;
