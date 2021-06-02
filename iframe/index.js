@@ -4,12 +4,12 @@ const script = document.getElementById('widget-recosante')
 
 const domain = script.dataset.domain
 const size = script.dataset.size
-const background = script.dataset.background
+const insee = script.dataset.insee
 const source = window.location.href.toString()
 
-const src = `${
-  domain || 'https://recosante-widget.netlify.app'
-}/?size=${size}&background=${background}&source=${source}`
+const src = `${domain || 'https://recosante-widget.netlify.app'}/${
+  insee || ''
+}?size=${size}&source=${source}`
 
 const iframe = document.createElement('iframe')
 
