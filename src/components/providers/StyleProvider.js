@@ -20,11 +20,6 @@ export default function CO2NumberProvider(props) {
 
   const [size] = useQueryParam('size', withDefault(NumberParam, 16))
 
-  const [background] = useQueryParam(
-    'background',
-    withDefault(StringParam, 'ffffff')
-  )
-
   return (
     <StyleContext.Provider
       value={{
@@ -39,7 +34,6 @@ export default function CO2NumberProvider(props) {
         theme={{
           ...themes[accessibility ? 'classic' : theme],
           size,
-          background,
         }}
       >
         {props.children}
