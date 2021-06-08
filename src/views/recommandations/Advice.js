@@ -15,21 +15,22 @@ const Reco = styled.p`
   font-weight: 700;
 `
 const Text = styled.p``
-export default function Recommandation() {
+export default function Recommandation(props) {
   return (
     <Wrapper>
-      <Intro>vos déplacements</Intro>
-      <Reco>
-        Avec un enfant, éviter les sorties à proximité des grands axes routiers
-        aux heures de pointe (7h-10h et 17h-20h).
-      </Reco>
-      <Text>
-        💡 Dans une étude réalisée en 2015, l’observatoire régional de
-        surveillance de la qualité de l’air en Occitanie démontré que le choix
-        d'emprunter un axe avec peu de trafic routier a permis de réduire
-        l'exposition moyenne du cycliste ou du piéton d’environ 40 % pour le
-        dioxyde d'azote (NO2) et de 50 % pour les particules PM10.
-      </Text>
+      <Intro
+        dangerouslySetInnerHTML={{
+          __html: props.recommandation.objectif,
+        }}
+      />
+      <Reco
+        dangerouslySetInnerHTML={{
+          __html: props.recommandation.recommandation,
+        }}
+      />
+      <Text
+        dangerouslySetInnerHTML={{ __html: props.recommandation.precisions }}
+      />
     </Wrapper>
   )
 }

@@ -69,6 +69,23 @@ export function useIndicators(code) {
     }
   )
 }
+export function useRecommandations() {
+  return useQuery(
+    ['recommandations'],
+    () =>
+      axios
+        .get(
+          `http://ecosante.beta.gouv.fr/recommandations/_list?categories=montrer_dans_le_widget&order=random`
+        )
+        .then((res) => res.data),
+    {
+      keepPreviousData: true,
+      retryDelay: 500,
+      refetchOnWindowFocus: false,
+    }
+  )
+}
+
 export function useModal(label) {
   return useQuery(
     ['modal', label],

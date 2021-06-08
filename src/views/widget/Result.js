@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 import DataContext from 'utils/DataContext'
 import Buttons from 'components/misc/Buttons'
+import Error from 'components/misc/Error'
 import Title from './result/Title'
 import AirQuality from './result/AirQuality'
 import Pollens from './result/Pollens'
-import Error from './result/Error'
 
 const Wrapper = styled.div`
   flex: 1;

@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import Slider from 'react-slick'
 import { useHistory } from 'react-router-dom'
 
+import { useRecommandations } from 'utils/api'
 import Button from 'components/base/Button'
+import Error from 'components/misc/Error'
 import Buttons from 'components/misc/Buttons'
 import Advice from './recommandations/Advice'
-import Advice2 from './recommandations/Advice2'
-import Advice3 from './recommandations/Advice3'
 
 const Wrapper = styled.div`
   flex: 1;
@@ -123,7 +123,11 @@ const Bottom = styled.div`
 export default function Recommandation() {
   let history = useHistory()
 
-  return (
+  const { data, isFetching, isFetched, isError } = useRecommandations()
+
+  return isError ? (
+    <Error />
+  ) : (
     <Wrapper>
       <Top>
         <Header>
@@ -136,9 +140,13 @@ export default function Recommandation() {
         </Title>
         <SliderWrapper>
           <Slider infinite={true}>
-            <Advice />
-            <Advice2 />
-            <Advice3 />
+            {data &&
+              data.map((recommandation) => (
+                <Advice
+                  key={recommandation.id}
+                  recommandation={recommandation}
+                />
+              ))}
           </Slider>
         </SliderWrapper>
       </Top>
