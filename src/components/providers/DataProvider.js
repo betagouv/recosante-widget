@@ -16,7 +16,8 @@ export default function DataProvider(props) {
         data,
         isFetching,
         isFetched,
-        invalidData: (data && !data.data) || isError ? true : false,
+        invalidData:
+          (data && (!data.forecast || !data.raep)) || isError ? true : false,
       }}
     >
       {props.children}

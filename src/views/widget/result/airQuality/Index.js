@@ -20,7 +20,7 @@ export default function Index(props) {
   return (
     <Wrapper>
       <Label>Indice de qualité de l'air</Label>
-      <Value>{props.data && props.data.data.label}</Value>
+      <Value>{props.data && props.data.forecast.label}</Value>
     </Wrapper>
   )
 }

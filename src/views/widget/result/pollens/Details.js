@@ -15,12 +15,18 @@ export default function Details(props) {
   return (
     <Wrapper open={props.open}>
       <Elements>
-        <Element index={0} open={props.open} label='Chêne' value={2} />
-        <Element index={1} open={props.open} label='Bouleau' value={3} />
-        <Element index={2} open={props.open} label='Cypres' value={2} />
-        <Element index={3} open={props.open} label='Graminées' value={4} />
-        <Element index={4} open={props.open} label='Frênes' value={3} />
-        <Element index={5} open={props.open} label='Charme' value={2} />
+        {props.data &&
+          Object.entries(props.data.raep.allergenes)
+            .filter((key) => key[1] > 0)
+            .map((key, index) => (
+              <Element
+                key={key[0]}
+                index={index}
+                open={props.open}
+                label={key[0]}
+                value={key[1]}
+              />
+            ))}
       </Elements>
     </Wrapper>
   )

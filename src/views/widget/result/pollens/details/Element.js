@@ -39,6 +39,26 @@ const Wrapper = styled.div`
   }
 `
 export default function Element(props) {
+  const labels = {
+    cypres: 'Cyprès',
+    noisetier: 'Noisetier',
+    aulne: 'Aulne',
+    peuplier: 'Peuplier',
+    saule: 'Saule',
+    frene: 'Frêne',
+    charme: 'Charme',
+    bouleau: 'Bouleau',
+    platane: 'Platane',
+    chene: 'Chêne',
+    olivier: 'Olivier',
+    tilleul: 'Tilleul',
+    chataignier: 'Châtaignier',
+    rumex: 'Rumex',
+    graminees: 'Graminées',
+    plantain: 'Plantain',
+    urticacees: 'Urticacées',
+    armoises: 'Armoises',
+  }
   return (
     <Wrapper
       index={props.index}
@@ -46,7 +66,7 @@ export default function Element(props) {
       visible={props.visible}
       value={props.value}
     >
-      {props.label}
+      {labels[props.label]}
     </Wrapper>
   )
 }

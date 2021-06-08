@@ -16,8 +16,8 @@ const Wrapper = styled.svg`
 `
 export default function Chart(props) {
   const indice =
-    props.data && props.data.data && props.data.data
-      ? props.data.data.indice
+    props.data && props.data.forecast && props.data.forecast
+      ? props.data.forecast.indice
       : null
   return (
     <Wrapper width='142' height='143' viewBox='0 0 142 143'>

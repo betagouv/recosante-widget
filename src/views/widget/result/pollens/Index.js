@@ -28,13 +28,23 @@ const Toggle = styled.button`
   cursor: pointer;
 `
 export default function Index(props) {
+  const labels = [
+    'Nul',
+    'Très faible',
+    'Faible',
+    'Moyen',
+    'Élevé',
+    'Très élevé',
+  ]
   return (
     <Wrapper>
       <Label>Risque d’allergie aux pollens</Label>
-      <Value>Élevé</Value>
-      <Toggle onClick={() => props.setOpen((prevOpen) => !prevOpen)}>
-        {props.open ? 'Cacher' : 'Voir'} les pollens actifs
-      </Toggle>
+      <Value>{props.data && labels[props.data.raep.total]}</Value>
+      {props.data && props.data.raep.total > 0 && (
+        <Toggle onClick={() => props.setOpen((prevOpen) => !prevOpen)}>
+          {props.open ? 'Cacher' : 'Voir'} les pollens actifs
+        </Toggle>
+      )}
     </Wrapper>
   )
 }

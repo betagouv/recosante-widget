@@ -60,7 +60,7 @@ export function useIndicators(code) {
     ['indicators', code],
     () =>
       axios
-        .get(`https://indicepollution.cleverapps.io/forecast?insee=${code}`)
+        .get(`https://ecosante.beta.gouv.fr/data?insee=${code}`)
         .then((res) => res.data),
     {
       enabled: code ? true : false,
