@@ -75,7 +75,7 @@ export function useRecommandations() {
     () =>
       axios
         .get(
-          `http://ecosante.beta.gouv.fr/recommandations/_list?categories=montrer_dans_le_widget&order=random`
+          `https://ecosante.beta.gouv.fr/recommandations/_list?categories=montrer_dans_le_widget&order=random`
         )
         .then((res) => res.data),
     {
