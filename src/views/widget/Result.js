@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 
 import DataContext from 'utils/DataContext'
-import Buttons from 'components/misc/Buttons'
+import Button from 'components/base/Button'
 import Error from 'components/misc/Error'
 import Title from './result/Title'
 import AirQuality from './result/AirQuality'
@@ -44,7 +44,7 @@ export default function Result() {
             <Pollens data={data} />
           </div>{' '}
           <Bottom>
-            <Buttons />
+            <Button to='/recommandation'>Comment agir ?</Button>
           </Bottom>
         </>
       ) : (

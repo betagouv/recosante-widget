@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import SearchBar from './search/SearchBar'
 
 import DataContext from 'utils/DataContext'
-import Buttons from 'components/misc/Buttons'
+import Button from 'components/base/Button'
 
 const Wrapper = styled.div`
   position: absolute;
@@ -61,7 +61,9 @@ export default function Search() {
           <strong>des polluants atmosphériques et des pollens</strong> sur votre
           santé.
         </Text>
-        <Buttons />
+        <Button hollow to='https://recosante.beta.gouv.fr'>
+          M'abonner
+        </Button>
       </Bottom>
     </Wrapper>
   )

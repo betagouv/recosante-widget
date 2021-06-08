@@ -25,11 +25,13 @@ export default function Recommandation(props) {
       />
       <Reco
         dangerouslySetInnerHTML={{
-          __html: props.recommandation.recommandation,
+          __html: props.recommandation.recommandation_sanitized,
         }}
       />
       <Text
-        dangerouslySetInnerHTML={{ __html: props.recommandation.precisions }}
+        dangerouslySetInnerHTML={{
+          __html: props.recommandation.precisions_sanitized,
+        }}
       />
     </Wrapper>
   )

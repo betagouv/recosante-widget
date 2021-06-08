@@ -18,6 +18,7 @@ export default function Details(props) {
         {props.data &&
           Object.entries(props.data.raep.allergenes)
             .filter((key) => key[1] > 0)
+            .sort((a, b) => (a[0] > b[0] ? 1 : -1))
             .map((key, index) => (
               <Element
                 key={key[0]}

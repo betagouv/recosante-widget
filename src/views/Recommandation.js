@@ -6,7 +6,6 @@ import { useHistory } from 'react-router-dom'
 import { useRecommandations } from 'utils/api'
 import Button from 'components/base/Button'
 import Error from 'components/misc/Error'
-import Buttons from 'components/misc/Buttons'
 import Advice from './recommandations/Advice'
 
 const Wrapper = styled.div`
@@ -151,7 +150,7 @@ export default function Recommandation() {
         </SliderWrapper>
       </Top>
       <Bottom>
-        <Buttons recommandation />
+        <Button to='https://recosante.beta.gouv.fr'>M'abonner</Button>
       </Bottom>
     </Wrapper>
   )
