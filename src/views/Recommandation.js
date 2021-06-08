@@ -123,7 +123,7 @@ const Bottom = styled.div`
 export default function Recommandation() {
   let history = useHistory()
 
-  const { data, isFetching, isFetched, isError } = useRecommandations()
+  const { data, isError } = useRecommandations()
 
   return isError ? (
     <Error />
