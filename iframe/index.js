@@ -7,7 +7,7 @@ const size = script.dataset.size
 const insee = script.dataset.insee
 const source = window.location.href.toString()
 
-const src = `${domain || 'http://app.recosante.beta.gouv.fr'}/${
+const src = `${domain || 'https://app.recosante.beta.gouv.fr'}/${
   insee || ''
 }?size=${size}&source=${source}`
 
