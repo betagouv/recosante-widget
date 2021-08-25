@@ -20,7 +20,10 @@ export default function Recommandation(props) {
     <Wrapper>
       <Intro
         dangerouslySetInnerHTML={{
-          __html: props.recommandation.objectif,
+          __html: props.recommandation.objectif.replace(
+            'Aujourd’hui, votre recommandation est un conseil pratique pour ',
+            ''
+          ),
         }}
       />
       <Reco
