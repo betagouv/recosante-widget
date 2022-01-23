@@ -1,4 +1,8 @@
-# Recosanté - Widget
+# Recosanté - Widget (ARCHIVÉ)
+
+## ⚠️ Ce dépôt GIT est une archive. Il a été remplacé par https://github.com/betagouv/recosante
+
+---
 
 Application web permettant de visualiser les indicateurs environnementaux d'une ville
 
